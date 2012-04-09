@@ -1,0 +1,74 @@
+<form name="form" id="form" action="/zebra/zebra/classes/Zebra_Form/examples/?example=contact&amp;template=horizontal" method="post" class="Zebra_Form">
+<div class="hidden">
+    <input type="hidden" name="name_form" id="name_form" value="form">
+    <input type="hidden" name="timer_form" id="timer_form" value="nJXyhCyyJyCN">
+    <input type="text" name="response_form" id="response_form" value="" class="control text" autocomplete="off">
+</div>
+<table>
+    <tr class="row">
+        <td valign="top">
+            <label for="name" id="label_name">Your name:<span class="required">*</span></label>
+        </td>
+        <td valign="top">
+            <input type="text" name="name" id="name" value="" class="control text validate[required]">
+        </td>
+    </tr>
+    <tr class="row even">
+        <td valign="top">
+            <label for="email" id="label_email">Your email address:<span class="required">*</span></label>
+        </td>
+        <td valign="top">
+            <input type="text" name="email" id="email" value="" class="control text validate[required,email]">
+        </td>
+    </tr>
+    <tr class="row">
+        <td valign="top">
+            <label for="subject" id="label_subject">Subject<span class="required">*</span></label>
+        </td>
+        <td valign="top">
+            <input type="text" name="subject" id="subject" value="" class="control text validate[required]">
+        </td>
+    </tr>
+    <tr class="row even">
+        <td valign="top">
+            <label for="message" id="label_message">Message:<span class="required">*</span></label>
+        </td>
+        <td valign="top">
+            <textarea name="message" id="message" rows="5" cols="80" class="control show-character-counter validate[required,length(0,140)]" maxlength="140"></textarea>
+        </td>
+    </tr>
+    <tr class="row last">
+        <td valign="top"></td>
+        <td valign="top">
+            <input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" class="submit">
+        </td>
+    </tr>
+</table>
+</form>
+<script type="text/javascript">
+function init_612dc97309bc54c9cabb94fdab627b97() {
+    if (typeof jQuery == "undefined" || typeof jQuery.fn.Zebra_Form == "undefined") {
+        setTimeout("init_612dc97309bc54c9cabb94fdab627b97()", 100);
+        return
+    }
+    $("#form").Zebra_Form({
+        error_messages: {
+            "name": {
+                "required": "Name is required!"
+            },
+            "email": {
+                "required": "Email is required!",
+                "email": "Email address seems to be invalid!"
+            },
+            "subject": {
+                "required": "Subject is required!"
+            },
+            "message": {
+                "required": "Message is required!",
+                "length":" Maximum length is 140 characters!"
+            }
+        }
+    })
+}
+init_612dc97309bc54c9cabb94fdab627b97()
+</script>

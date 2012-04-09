@@ -1,0 +1,2 @@
+<h1>Registration Failed</h1>
+<p>We're sorry, but an error has occurred and your registration for the username <b> <?php echo $_SESSION['reguname']; ?> </b>, could not be completed.<br>Please try again at a later time.</p>

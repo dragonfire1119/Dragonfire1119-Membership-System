@@ -1,0 +1,64 @@
+<form name="form" id="form" action="/zebra/zebra/classes/Zebra_Form/examples/?example=login&amp;template=horizontal" method="post" class="Zebra_Form">
+<div class="hidden">
+    <input type="hidden" name="name_form" id="name_form" value="form">
+    <input type="hidden" name="timer_form" id="timer_form" value="KrxnRJwRxhww">
+    <input type="text" name="response_form" id="response_form" value="" class="control text" autocomplete="off">
+</div>
+<table>
+    <tr class="row">
+        <td valign="top">
+            <label for="email" id="label_email">Email<span class="required">*</span></label>
+        </td>
+        <td valign="top">
+            <input type="text" name="email" id="email" value="" class="control text validate[required,email]" autocomplete="off">
+        </td>
+    </tr>
+    <tr class="row even">
+        <td valign="top">
+            <label for="password" id="label_password">Password<span class="required">*</span></label>
+        </td>
+        <td valign="top">
+            <input type="password" name="password" id="password" value="" class="control password validate[required,minlength]" autocomplete="off">
+        </td>
+    </tr>
+    <tr class="row">
+        <td valign="top"></td>
+        <td valign="top">
+            <div class="cell">
+                <input type="checkbox" name="remember_me" id="remember_me_yes" value="yes" class="control checkbox">
+            </div>
+            <div class="cell">
+                <label for="remember_me_yes" id="label_remember_me_yes">Remember me</label>
+            </div>
+            <div class="clear"></div>
+        </td>
+    </tr>
+    <tr class="row even last">
+        <td valign="top"></td>
+        <td valign="top">
+            <input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" class="submit">
+        </td>
+    </tr>
+</table>
+</form>
+<script type="text/javascript">
+function init_da2751e777dcf7695c6d7f593c668d59() {
+    if (typeof jQuery == "undefined" || typeof jQuery.fn.Zebra_Form == "undefined") {
+        setTimeout("init_da2751e777dcf7695c6d7f593c668d59()", 100);
+        return
+    }
+    $("#form").Zebra_Form({
+        error_messages: {
+            "email": {
+                "required": "Email is required!",
+                "email": "Email address seems to be invalid!"
+            },
+            "password": {
+                "required": "Password is required!",
+                "length": "The password must have between 6 and 10 characters"
+            }
+        }
+    })
+}
+init_da2751e777dcf7695c6d7f593c668d59()
+</script>

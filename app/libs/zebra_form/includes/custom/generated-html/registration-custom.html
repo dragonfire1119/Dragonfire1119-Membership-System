@@ -1,0 +1,84 @@
+<form name="form" id="form" action="/zebra/zebra/classes/Zebra_Form/examples/?example=registration&amp;template=custom" method="post" class="Zebra_Form">
+<div class="hidden">
+    <input type="hidden" name="name_form" id="name_form" value="form">
+    <input type="hidden" name="timer_form" id="timer_form" value="vWdUi8tU68aa">
+    <input type="text" name="response_form" id="response_form" value="" class="control text" autocomplete="off">
+</div>
+<div class="row">
+    <div class="cell">
+        <label for="firstname" id="label_firstname">First name:<span class="required">*</span></label>
+        <input type="text" name="firstname" id="firstname" value="" class="control text validate[required]">
+    </div>
+    <div class="cell">
+        <label for="lastname" id="label_lastname">Last name:<span class="required">*</span></label>
+        <input type="text" name="lastname" id="lastname" value="" class="control text validate[required]">
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="row even">
+    <label for="email" id="label_email">Email address:<span class="required">*</span></label>
+    <input type="text" name="email" id="email" value="" class="control text validate[required,email]">
+    <div class="note" id="note_email" style="width:200px">
+        Please enter a valid email address. An email will be sent to this address with a link you need to click on in
+        order to activate your account
+    </div>
+</div>
+<div class="row">
+    <div class="cell">
+        <label for="password" id="label_password">Choose a password:<span class="required">*</span></label>
+        <input type="password" name="password" id="password" value="" class="control password validate[required,length(6,10)]" maxlength="10">
+        <div class="note" id="note_password" style="width: 180px">
+            Password must be have between 6 and 10 characters.
+        </div>
+    </div>
+    <div class="cell">
+        <label for="confirm_password" id="label_confirm_password">Confirm password:</label>
+        <input type="password" name="confirm_password" id="confirm_password" value="" class="control password validate[compare(password)]">
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="row even">
+    <img src="http://localhost/zebra/zebra/classes/Zebra_Form/process.php?captcha=1&amp;nocache=1302289809" alt="">
+    <label for="captcha_code" id="label_captcha_code">Are you human?</label>
+    <input type="text" name="captcha_code" id="captcha_code" value="" class="control text validate[captcha]">
+    <div class="note" id="note_captcha" style="width: 200px">
+        You must enter the characters with black color that stand out from the other characters
+    </div>
+</div>
+<div class="row even last">
+    <input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" class="submit">
+</div>
+</form>
+<script type="text/javascript">
+function init_9c97b790a621503109955a3dde9b8d86() {
+    if (typeof jQuery == "undefined" || typeof jQuery.fn.Zebra_Form == "undefined") {
+        setTimeout("init_9c97b790a621503109955a3dde9b8d86()", 100);
+        return
+    }
+    $("#form").Zebra_Form({
+        error_messages: {
+            "firstname": {
+                "required": "First name is required!"
+            },
+            "lastname": {
+                "required": "Last name is required!"
+            },
+            "email": {
+                "required": "Email is required!",
+                "email": "Email address seems to be invalid!"
+            },
+            "password": {
+                "required": "Password is required!",
+                "length": "The password must have between 6 and 10 characters"
+            },
+            "confirm_password": {
+                "compare": "Password not confirmed correctly!"
+            },
+            "captcha_code": {
+                "captcha": "Characters from image entered incorrectly!"
+            }
+        }
+    })
+}
+init_9c97b790a621503109955a3dde9b8d86()
+</script>

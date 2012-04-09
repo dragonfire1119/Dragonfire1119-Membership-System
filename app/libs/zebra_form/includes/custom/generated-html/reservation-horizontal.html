@@ -1,0 +1,177 @@
+<form name="form" id="form" action="/zebra/zebra/classes/Zebra_Form/examples/?example=reservation&amp;template=horizontal" method="post" class="Zebra_Form">
+<div class="hidden">
+    <input type="hidden" name="name_form" id="name_form" value="form">
+    <input type="hidden" name="timer_form" id="timer_form" value="3sDHpGbbDYp1">
+    <input type="text" name="response_form" id="response_form" value="" class="control text" autocomplete="off">
+</div>
+<table>
+    <tr class="row">
+        <td valign="top">
+            <label for="name" id="label_name">Your name:<span class="required">*</span></label>
+        </td>
+        <td valign="top">
+            <input type="text" name="name" id="name" value="" class="control text validate[required]">
+        </td>
+    </tr>
+    <tr class="row even">
+        <td valign="top">
+            <label for="email" id="label_email">Your email address:<span class="required">*</span></label>
+        </td>
+        <td valign="top">
+            <input type="text" name="email" id="email" value="" class="control text validate[required,email]">
+        </td>
+    </tr>
+    <tr class="row">
+        <td valign="top">
+            <label for="department" id="label_department">Department:<span class="required">*</span></label>
+        </td>
+        <td valign="top">
+            <select name="department" id="department" class="control validate[required] other">
+                <option value="">- select -</option>
+				<option value="0">Marketing</option>
+				<option value="1">Operations</option>
+				<option value="2">Customer Service</option>
+				<option value="3">Human Resources</option>
+				<option value="4">Sales Department</option>
+				<option value="5">Accounting Department</option>
+				<option value="6">Legal Department</option>
+				<option value="other">Other...</option>
+			</select>
+			<input type="text" name="department_other" id="department_other" value="" class="control text other other-invisible">
+		</td>
+	</tr>
+	<tr class="row even">
+		<td valign="top">
+			<label id="label_room">Which room would you like to reserve:<span class="required">*</span></label>
+		</td>
+		<td valign="top">
+			<div class="cell">
+				<input type="radio" name="room" id="room_A" value="A" class="control radio validate[required]">
+			</div>
+			<div class="cell">
+				<label for="room_A" id="label_room_A" class="option">Room A</label>
+			</div>
+			<div class="clear"></div>
+			<div class="cell">
+				<input type="radio" name="room" id="room_B" value="B" class="control radio">
+			</div>
+			<div class="cell">
+				<label for="room_B" id="label_room_B" class="option">Room B</label>
+			</div>
+			<div class="clear"></div>
+			<div class="cell">
+				<input type="radio" name="room" id="room_C" value="C" class="control radio">
+			</div>
+			<div class="cell">
+				<label for="room_C" id="label_room_C" class="option">Room C</label>
+			</div>
+			<div class="clear"></div>
+		</td>
+	</tr>
+	<tr class="row">
+		<td valign="top">
+			<label id="label_extra">Extra requirements:</label>
+		</td>
+		<td valign="top">
+			<div class="cell">
+				<input type="checkbox" name="extra[]" id="extra_flipchards" value="flipchards" class="control checkbox">
+			</div>
+			<div class="cell">
+				<label for="extra_flipchards" id="label_extra_flipchards" class="option">Flipchart and pens</label>
+			</div>
+			<div class="clear"></div>
+			<div class="cell">
+				<input type="checkbox" name="extra[]" id="extra_plasma" value="plasma" class="control checkbox">
+			</div>
+			<div class="cell">
+				<label for="extra_plasma" id="label_extra_plasma" class="option">Plasma TV screen</label>
+			</div>
+			<div class="clear"></div>
+			<div class="cell">
+				<input type="checkbox" name="extra[]" id="extra_beverages" value="beverages" class="control checkbox">
+			</div>
+			<div class="cell">
+				<label for="extra_beverages" id="label_extra_beverages" class="option">Coffee, tea and mineral water</label>
+			</div>
+			<div class="clear"></div>
+		</td>
+	</tr>
+	<tr class="row even">
+		<td valign="top">
+			<label for="date" id="label_date">Reservation date<span class="required">*</span></label>
+		</td>
+		<td valign="top">
+            <div>
+                <input type="text" name="date" id="date" value="" class="control text date validate[required,date]">
+                <div class="clear"></div>
+            </div>
+			<div class="note" id="note_date">Date format is M d, Y</div>
+		</td>
+	</tr>
+	<tr class="row">
+		<td valign="top">
+			<label for="time" id="label_time">Reservation time :</label>
+		</td>
+		<td valign="top">
+			<select name="time_hours" id="time_hours" class="control time">
+				<option value="9">09</option>
+				<option value="10">10</option>
+				<option value="11" selected="selected">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+			</select>
+			<select name="time_minutes" id="time_minutes" class="control time">
+				<option value="0">00</option>
+				<option value="30">30</option>
+			<select>
+			<div class="clear"></div>
+		</td>
+	</tr>
+	<tr class="row even last">
+		<td valign="top"></td>
+		<td valign="top">
+			<input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" class="submit">
+		</td>
+	</tr>
+</table>
+</form>
+<script type="text/javascript">
+function init_d90f56453dbf9d4f6becaa0d6a175b6d() {
+    if (typeof jQuery == "undefined" || typeof jQuery.fn.Zebra_Form == "undefined" || jQuery.fn.Zebra_DatePicker == "undefined") {
+        setTimeout("init_d90f56453dbf9d4f6becaa0d6a175b6d()", 100);
+        return
+    }
+    $('#date').Zebra_DatePicker({
+        days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        direction: 1,
+        format: 'M d, Y',
+        months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    });
+    $("#form").Zebra_Form({
+        error_messages: {
+            "name": {
+                "required": "Name is required!"
+            },
+            "email": {
+                "required": "Email is required!",
+                "email": "Email address seems to be invalid!"
+            },
+            "department": {
+                "required": "Department is required!"
+            },
+            "room_A": {
+                "required": "Room selection is required!"
+            },
+            "date": {
+                "required": "Date is required!",
+                "date": "Date is invalid!"
+            }
+        }
+    })
+}
+init_d90f56453dbf9d4f6becaa0d6a175b6d()
+</script>

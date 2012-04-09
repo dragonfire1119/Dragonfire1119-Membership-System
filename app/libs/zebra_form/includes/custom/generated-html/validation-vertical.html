@@ -1,0 +1,100 @@
+<form name="form" id="form" action="/wp-content/demos/Zebra_Form/?example=validation&amp;template=vertical" method="post" class="Zebra_Form">
+<div class="hidden">
+	<input type="hidden" name="name_form" id="name_form" value="form">
+	<input type="hidden" name="timer_form" id="timer_form" value="yCIfA2yyfNIf">
+	<input type="text" name="response_form" id="response_form" value="" class="control text" autocomplete="off">
+</div>
+<div class="row">
+	<label for="alphabet" id="label_alphabet">Alphabet:<span class="required">*</span></label>
+	<input type="text" name="alphabet" id="alphabet" value="" class="control text validate[required,alphabet()]" onkeypress="javascript:return form_object.filter_input('alphabet', event);">
+	<div class="note" id="note_alphabet">
+		Accepts only characters from the alphabet (case-insensitive a to z)
+	</div>
+</div>
+<div class="row even">
+	<label for="alphanumeric" id="label_alphanumeric">Alphanumeric:<span class="required">*</span></label>
+	<input type="text" name="alphanumeric" id="alphanumeric" value="" class="control text validate[required,alphanumeric(comma;.?)]" onkeypress="javascript:return form_object.filter_input('alphanumeric', event, ',.?');">
+	<div class="note" id="note_alphanumeric">
+		Accepts only characters from the alphabet (case-insensitive a to z) and digits (0 to 9)
+	</div>
+</div>
+<div class="row">
+	<label for="digits" id="label_digits">Digits:<span class="required">*</span></label>
+	<input type="text" name="digits" id="digits" value="" class="control text validate[required,digits()]" onkeypress="javascript:return form_object.filter_input('digits', event);">
+	<div class="note" id="note_digits">
+		Accepts only digits (0 to 9)
+	</div>
+</div>
+<div class="row even">
+	<label for="float" id="label_float">Float:<span class="required">*</span></label>
+	<input type="text" name="float" id="float" value="" class="control text validate[required,float()]" onkeypress="javascript:return form_object.filter_input('float', event);">
+	<div class="note" id="note_float">
+		Accepts only digits (0 to 9) and/or one dot (but not as the very first character) and/or one minus sign (but only if it is the very first character)
+	</div>
+</div>
+<div class="row">
+	<label for="length" id="label_length">Length:<span class="required">*</span></label>
+	<input type="text" name="length" id="length" value="" class="control text validate[required,length(6,12)]" maxlength="12">
+	<div class="note" id="note_length">
+		Must contain between 6 and 12 characters
+	</div>
+</div>
+<div class="row even">
+	<label for="number" id="label_number">Number:<span class="required">*</span></label>
+	<input type="text" name="number" id="number" value="" class="control text validate[required,number()]" onkeypress="javascript:return form_object.filter_input('number', event);">
+	<div class="note" id="note_number">
+		Accepts only digits (0 to 9) and/or one minus sign (but only if it is the very first character)
+	</div>
+</div>
+<div class="row">
+	<label for="regexp" id="label_regexp">Regular expression:<span class="required">*</span></label>
+	<input type="text" name="regexp" id="regexp" value="" class="control text validate[required,regexp(^07\comma;lsqb;0-9rsqb;{8}$)]">
+	<div class="note" id="note_regexp">
+		Validates if the value satisfies the given regular expression
+	</div>
+</div>
+<div class="row even last">
+	<input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" class="submit">
+</div>
+</form>
+<script type="text/javascript">
+function init_80ee5c8d7077389f166bd986c1bb0009() {
+    if (typeof jQuery == "undefined" || typeof jQuery.fn.Zebra_Form == "undefined") {
+        setTimeout("init_80ee5c8d7077389f166bd986c1bb0009()", 100);
+        return
+    }
+    $("#form").Zebra_Form({
+        error_messages: {
+            "alphabet": {
+                "required": "This field is required!",
+                "alphabet": "Accepts only characters from the alphabet (case-insensitive a to z)"
+            },
+            "alphanumeric": {
+                "required": "This field is required!",
+                "alphanumeric": "Accepts only characters from the alphabet (case-insensitive a to z) and digits (0 to 9)"
+            },
+            "digits": {
+                "required": "This field is required!",
+                "digits": "Accepts only digits (0 to 9)"
+            },
+            "float": {
+                "required": "This field is required!",
+                "float": "Accepts only digits (0 to 9) and/or one dot (but not as the very first character) and/or one minus sign (but only if it is the very first character)"
+            },
+            "length": {
+                "required": "This field is required!",
+                "length": "Must contain between 6 and 12 characters!"
+            },
+            "number": {
+                "required": "This field is required!",
+                "number": "Accepts only digits (0 to 9) and/or one minus sign (but only if it is the very first character)"
+            },
+            "regexp": {
+                "required": "This field is required!",
+                "regexp": "Accepts only digits (0 to 9) and/or one minus sign (but only if it is the very first character)"
+            }
+        }
+    })
+}
+init_80ee5c8d7077389f166bd986c1bb0009()
+</script>

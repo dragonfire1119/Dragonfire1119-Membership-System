@@ -1,0 +1,48 @@
+<form name="form" id="form" action="/zebra/zebra/classes/Zebra_Form/examples/?example=login&amp;template=labels-inside" method="post" class="Zebra_Form">
+<div class="hidden">
+    <input type="hidden" name="name_form" id="name_form" value="form">
+    <input type="hidden" name="timer_form" id="timer_form" value="1HGbTzWTTH1z">
+    <input type="text" name="response_form" id="response_form" value="" class="control text" autocomplete="off">
+</div>
+<div class="row">
+    <input type="text" name="email" id="email" value="" class="control text validate[required,email] inner-label inline" autocomplete="off" alt="Email">
+    <span class="required">*</span>
+</div>
+<div class="row even">
+    <input type="password" name="password" id="password" value="" class="control password validate[required,length(6,10)] inner-label inline" autocomplete="off" maxlength="10" alt="Password">
+    <span class="required">*</span>
+</div>
+<div class="row">
+    <div class="cell">
+        <input type="checkbox" name="remember_me" id="remember_me_yes" value="yes" class="control checkbox">
+    </div>
+    <div class="cell">
+        <label for="remember_me_yes" id="label_remember_me_yes">Remember me</label>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="row even last">
+    <input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" class="submit">
+</div>
+</form>
+<script type="text/javascript">
+function init_da2751e777dcf7695c6d7f593c668d59() {
+    if (typeof jQuery == "undefined" || typeof jQuery.fn.Zebra_Form == "undefined") {
+        setTimeout("init_da2751e777dcf7695c6d7f593c668d59()", 100);
+        return
+    }
+    $("#form").Zebra_Form({
+        error_messages: {
+            "email": {
+                "required": "Email is required!",
+                "email": "Email address seems to be invalid!"
+            },
+            "password": {
+                "required": "Password is required!",
+                "length": "The password must have between 6 and 10 characters"
+            }
+        }
+    })
+}
+init_da2751e777dcf7695c6d7f593c668d59()
+</script>
