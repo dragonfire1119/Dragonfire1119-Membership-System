@@ -33,51 +33,14 @@ if (!defined('DMS_SECURITY')) {
  * http://dms.dragonfire1119.com/forum/
  */
 
-/**
- * Load the libs
- * 
- */
-include_once("libs/PFBC/form.php");
-include_once("libs/redbeanphp/rb.php");
+include_once("system.php");
 
 /*
- * The core files - These are the core files do not touch this at all
+ * Start loading modules here
+ * Set the load to TRUE if you want it active
+ * Set it to FALSE if you want it deactivated
+ * By default if TRUE or FALSE is not present it will be set to TRUE by default
  */
-include_once("config_db.php");
-include_once("includes/core/security.php");
-include_once("includes/core/database.php");
-include_once("includes/core/dmsform.php");
-include_once("includes/core/session.php");
-include_once("includes/core/dms.php");
-include_once("includes/core/api.php");
-include_once("DMS_Config.php");
-include_once("includes/core/mailer.php");
-
-/**
- * Load Modules
- */
-include_once("modules/forgotpasswordModule.php");
-include_once("modules/loginModule.php");
-include_once("modules/logoutModule.php");
-include_once("modules/registerModule.php");
- 
-/*
- * Load the Lang
- * You can load as many langs in here but what ever your not using put these in front of the
- * //include_once("whatever");
- */
-include_once("includes/lang/english.lang.php");
-
-/*
- * Loader all the modules - These are being slowly replaced by helpers now
- */
-include_once("app/helpers/css.php");
-include_once("app/helpers/html.php");
-include_once("app/helpers/javascript.php");
-
-/*
- * Libs - Do not touch this very important
- */
-include_once("app/libs/securimage/securimage.php");
+include(DIR_MODULES . "/dms/DMS_loader.php");
 
 ?>

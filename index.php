@@ -9,13 +9,20 @@ echo $html -> head;
 $html -> title("Login");
 echo $html -> endhead;
 echo $html -> body;
-echo $session -> username;
-if (isset($_GET['login'])) {
-	$login -> render("index.php?login");
-} else if (isset($_GET['logout'])) {
+if (isset($_GET['action']) AND $_GET['action'] == "login") {
+	$login -> render("login");
+} else if (isset($_GET['action']) AND $_GET['action'] == "logout") {
 	$logout -> render();
-} else if (isset($_GET['register'])) {
-	$register->render();
+} else if (isset($_GET['action']) AND $_GET['action'] == "register") {
+	$register -> render();
+} else if (isset($_GET['action']) AND $_GET['action'] == "messages") {
+	$checks -> render("checklogin", "login");
+	$pm -> render("messagesender", $session -> username);
+} else if (isset($_GET['profile']) AND $_GET['profile'] == $session->username) {
+	echo $session->username;
+	echo $session->userid;
+} else if (isset($_GET['edit']) AND $_GET['edit'] == $session->username) {
+	
 }
 echo $html -> endbody;
 echo $html -> endhtml;
