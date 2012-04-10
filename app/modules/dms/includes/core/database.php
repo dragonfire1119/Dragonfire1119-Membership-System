@@ -646,6 +646,9 @@ END");
 		R::exec($sql);
 		if (!TRACK_VISITORS)
 			return;
+		
+		R::exec( 'update users set online="yes" where username='.$username.'' );
+		
 		//$addactiveusers = R::$f->begin()->select('*')->from(TBL_ACTIVE_USERS)->where(' username = ? ')->put($username)->get('row');
 		//$count = count($addactiveusers);
 		//$addactiveusers = R::find(TBL_ACTIVE_USERS);
