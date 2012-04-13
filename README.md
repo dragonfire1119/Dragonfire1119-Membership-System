@@ -56,16 +56,15 @@ html in php
 ==========
 html in php:
 
-define("DMS_SECURITY", 1);
-
-include ("app/core.php");
-echo $html -> doctype;
-echo $html -> html;
-echo $html -> head;
-$html -> title("Login");
-echo $html -> endhead;
-echo $html -> body;
-Your render code in here
-echo $html -> endbody;
-echo $html -> endhtml;
+		define("DMS_SECURITY", 1);
+		include ("app/core.php");
+		echo $html -> doctype;
+		echo $html -> html;
+		echo $html -> head;
+		$html -> title("Login");
+		echo $html -> endhead;
+		echo $html -> body;
+		Your render code in here
+		echo $html -> endbody;
+		echo $html -> endhtml;
 
