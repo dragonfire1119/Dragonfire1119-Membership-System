@@ -36,7 +36,7 @@ include_once("checksModule.php");
 include_once("forgotpasswordModule.php");
 include_once("loginModule.php");
 include_once("logoutModule.php");
-include_once("pmModule.php");
+//include_once("pmModule.php");
 include_once("registerModule.php");
  
 /*
