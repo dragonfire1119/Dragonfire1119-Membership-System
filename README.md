@@ -37,7 +37,7 @@ Online 25 to 35
 
 Login Page
 =========
-This is just 4 lines of code to get a full login
+This is just 4 lines of code to get a full login page
 
 		define("DMS_SECURITY", 1);
 		include ("app/core.php");
@@ -46,7 +46,7 @@ This is just 4 lines of code to get a full login
 		
 Register Page
 ================
-This is just 3 lines of code to get a full login
+This is just 3 lines of code to get a full register page
 
         define("DMS_SECURITY", 1);
 		include ("app/core.php");
