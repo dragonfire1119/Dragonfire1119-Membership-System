@@ -22,17 +22,17 @@ Theres just one step to install DMS edit app/config.php
 
 Online 25 to 35
 
-/**
-* Database Constants - these constants are required
-* in order for there to be a successful connection
-* to the MySQL database. Make sure the information is
-* correct.
-*/
-define("DB_SERVER", "localhost");
-define("DB_USER", "root");
-define("DB_PASSS", "");
-define("DB_NAME", "dms");
-define("DB_TYPE", "mysql");
+		/**
+		* Database Constants - these constants are required
+		* in order for there to be a successful connection
+		* to the MySQL database. Make sure the information is
+		* correct.
+		*/
+		define("DB_SERVER", "localhost");
+		define("DB_USER", "root");
+		define("DB_PASSS", "");
+		define("DB_NAME", "dms");
+		define("DB_TYPE", "mysql");
 
 
 Login Page
