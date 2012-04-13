@@ -3,7 +3,7 @@ Dragonfire1119 Membership System
 
 I created this to be really simple and dynamic
 
-For Developer's Eyes Only
+For anybody's Eyes Only
 =========================
 DMS was created for anybody that knows how to copy/paste.
 
