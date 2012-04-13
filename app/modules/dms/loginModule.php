@@ -17,12 +17,23 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
  **************************************************************************/
 
+/**
+ * This handles rendering the login element
+ * 
+ * @author Christopher Hicks <dms.dragonfire1119.com> 
+ * @copyright 2012 Dragonfire1119
+ */
 class loginModule {
 
 	function __construct() {
 
 	}
-
+	
+	/**
+	 * This shows the login form when called
+	 * 
+	 * @param $redirect
+	 */
 	function render($redirect="") {
 		global $dmsForm, $form, $dms;
 		if ($dmsForm -> num_errors > 0) {
