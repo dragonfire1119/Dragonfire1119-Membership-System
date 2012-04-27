@@ -1,9 +1,0 @@
-<IfModule mod_rewrite.c>
-Options +FollowSymLinks
-Options +Indexes
-RewriteEngine On
-RewriteRule ^(.*)\/$ $1.php [NC]
-RewriteRule ^([a-z]*)$ index.php?action=$1 [L]
-RewriteRule ^profile/([^/]*)$ index.php?profile=$1 [L]
-RewriteRule ^edit/([^/]*)$ index.php?edit=$1 [L]
-</IfModule>
