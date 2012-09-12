@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * @category   Membership System
@@ -23,8 +24,40 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-?>
-<?php
-require 'system/core.php';
+class App {
 
-$app->register()->run();
+    private $login;
+    private $register;
+
+    public function login() {
+        $this->login = 'login';
+        return $this;
+    }
+
+    public function register() {
+        $this->register = 'register';
+        return $this;
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function run() {
+        global $load;
+        $load->app(true)->header()->run();
+
+        if (!empty($this->login)) {
+            $load->app(true)->content('login')->run();
+        }
+
+        if (!empty($this->register)) {
+            $load->app(true)->content('register')->run();
+        }
+
+        $load->app(true)->footer()->run();
+    }
+
+}
+
+?>

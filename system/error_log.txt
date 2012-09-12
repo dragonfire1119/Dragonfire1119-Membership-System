@@ -1,0 +1,19 @@
+[11-Sep-2012 04:23:28 UTC] PHP Warning:  Missing argument 1 for App::__construct(), called in /Users/apple/Documents/Websites/projects/dms/system/core.php on line 59 and defined in /Users/apple/Documents/Websites/projects/dms/system/helpers/app.class.php on line 34
+[11-Sep-2012 04:23:28 UTC] PHP Notice:  Undefined variable: enabled in /Users/apple/Documents/Websites/projects/dms/system/helpers/app.class.php on line 35
+[11-Sep-2012 04:24:37 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 04:24:58 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 04:25:01 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 04:26:34 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 04:26:44 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 04:26:56 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 04:27:05 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 04:27:07 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 04:27:27 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 04:27:29 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 04:31:20 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 04:31:58 UTC] PHP Fatal error:  Function name must be a string in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 05:07:26 UTC] PHP Fatal error:  Call to undefined method App::html() in /Users/apple/Documents/Websites/projects/dms/index.php on line 30
+[11-Sep-2012 13:23:01 UTC] PHP Notice:  Undefined index: email in /Users/apple/Documents/Websites/projects/dms/system/controllers/register.class.php on line 53
+[11-Sep-2012 13:23:01 UTC] PHP Notice:  Undefined index: password in /Users/apple/Documents/Websites/projects/dms/system/controllers/register.class.php on line 54
+[11-Sep-2012 13:23:01 UTC] PHP Notice:  Undefined index: email in /Users/apple/Documents/Websites/projects/dms/system/controllers/register.class.php on line 53
+[11-Sep-2012 13:23:01 UTC] PHP Notice:  Undefined index: password in /Users/apple/Documents/Websites/projects/dms/system/controllers/register.class.php on line 54

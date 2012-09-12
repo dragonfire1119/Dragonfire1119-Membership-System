@@ -23,8 +23,5 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-?>
-<?php
-require 'system/core.php';
-
-$app->register()->run();
+global $db;
+$db->setup('mysql:host='.DB_HOST.';dbname='.DB_NAME.'',''.DB_USER.'',''.DB_PASSWORD.''); //mysql

@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * @category   Membership System
@@ -23,8 +24,46 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-?>
-<?php
-require 'system/core.php';
+class Login {
 
-$app->register()->run();
+    /**
+     * Magic function
+     *
+     * @return NULL
+     */
+    function __construct() {
+
+    }
+
+    /**
+     * This function loads the init & view
+     *
+     * @return string
+     */
+    public function load() {
+        $this->init();
+
+        $this->view();
+    }
+
+    /**
+     * This hendles the login
+     *
+     * @return NULL
+     */
+    public function init() {
+
+    }
+
+    /**
+     * Handles the view
+     *
+     * @return HTML
+     */
+    public function view() {
+        global $load;
+
+        $load->header()->content('login')->footer()->run();
+    }
+
+}

@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * @category   Membership System
@@ -23,8 +24,40 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-?>
-<?php
-require 'system/core.php';
+class Pm {
 
-$app->register()->run();
+    /**
+     * Magic function
+     *
+     * @return NULL
+     */
+    function __construct() {
+
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function load() {
+        $this->init();
+        $this->view();
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function init() {
+
+    }
+
+    /**
+     *
+     * @return HTML
+     */
+    public function view() {
+        require_once ABSPATH . '/views/register/register.view' . END;
+    }
+
+}

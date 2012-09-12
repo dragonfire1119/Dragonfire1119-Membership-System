@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * @category   Membership System
@@ -23,8 +24,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-?>
-<?php
-require 'system/core.php';
+class Security {
 
-$app->register()->run();
+    /**
+     *
+     * @var string
+     * @return NULL
+     */
+    public $quickString;
+
+    /**
+     * Magic function
+     *
+     * @return NULL
+     */
+    function __construct() {
+
+    }
+
+    /**
+     * Makes content hashed
+     *
+     * @param string $content
+     * @param string $type
+     * @return \Security|boolean
+     */
+    public function hash($content = null, $type = 'md5'){
+        if($content == null)
+            $content = $this->quickString;
+        if(in_array($type, hash_algos())){
+            $this->quickString = hash($type, $content);
+            return $this;
+        }
+        return false;
+    }
+
+}

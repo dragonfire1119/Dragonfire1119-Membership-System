@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * @category   Membership System
@@ -23,8 +24,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-?>
-<?php
-require 'system/core.php';
+class Check {
 
-$app->register()->run();
+    /**
+     * Magic function
+     *
+     * @return null
+     */
+    function __construct() {
+
+    }
+
+    /**
+     * Check if the user is logged in or not
+     *
+     * @global class $session
+     * @return boolean
+     */
+    public function loggedin() {
+        global $session;
+
+        if($session->getSession('name') != NULL) {
+            return true;
+        } else if (isset($_COOKIE['name'])) {
+            return true;
+        }
+        return false;
+    }
+
+}

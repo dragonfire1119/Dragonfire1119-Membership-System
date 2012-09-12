@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * @category   Membership System
@@ -23,8 +24,50 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
-?>
-<?php
-require 'system/core.php';
+class Register {
 
-$app->register()->run();
+    /**
+     * Magic function
+     *
+     * @return NULL
+     */
+    function __construct() {
+
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function load() {
+        $this->init();
+        $this->view();
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function init() {
+        if(isset($_POST['signup'])) {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            $register = R::dispense('users');
+            $register->email = $email;
+            $register->password = $password;
+            $id = R::store($register);
+        }
+    }
+
+    /**
+     *
+     * @return HTML
+     */
+    public function view() {
+        global $load;
+
+        $load->header()->content('register')->footer()->run();
+    }
+
+}
