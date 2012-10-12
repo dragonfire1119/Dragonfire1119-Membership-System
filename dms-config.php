@@ -17,4 +17,20 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 **************************************************************************/
 
-require 'dms-includes/bootstrap.php';
+// Uncoment this if you want to debug
+ini_set( 'display_errors', 1 );
+ini_set( 'log_errors', 1 );
+error_reporting( E_ALL );
+
+/**
+ * This is the main config file for DMS
+ */
+define("ABSPATH", dirname(__FILE__));
+
+define("HOST", "localhost");
+define("DBNAME", "");
+define("USER", "");
+define("PASSWORD", "");
+
+R::setup('mysql:host='.HOST.';
+        dbname='.DBNAME.'',''.USER.'',''.PASSWORD.'');

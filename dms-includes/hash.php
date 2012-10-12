@@ -17,4 +17,38 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 **************************************************************************/
 
-require 'dms-includes/bootstrap.php';
+class Hash {
+
+    /**
+     * Hash a password using the Bcrypt hashing scheme.
+     *
+     * <code>
+     * 		// Create a Bcrypt hash of a value
+     * 		$hash = Hash::make('secret');
+     *
+     * 		// Use a specified number of iterations when creating the hash
+     * 		$hash = Hash::make('secret', 12);
+     * </code>
+     *
+     * @param  string  $value
+     * @param  int     $rounds
+     * @return string
+     */
+    public static function make($value) {
+
+        $salt = sha1($value);
+
+        return $salt;
+    }
+
+    /**
+     * Determine if an unhashed value matches a Bcrypt hash.
+     *
+     * @param  string  $value
+     * @param  string  $hash
+     * @return bool
+     */
+    public static function check($value, $hash) {
+        return sha1($value) === $hash;
+    }
+}

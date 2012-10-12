@@ -17,4 +17,10 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 **************************************************************************/
 
-require 'dms-includes/bootstrap.php';
+define("DMS_INC", dirname(__FILE__));
+require_once 'rb.php';
+require_once 'dms-config.php';
+require_once 'hash.php';
+
+require_once 'login.class.php';
+require_once 'register.class.php';
