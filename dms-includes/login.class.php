@@ -31,13 +31,13 @@ class Login {
      * @param type $remeber
      */
     public static function user($user, $password, $remember = NULL) {
-        $query = R::getAll('select * from users where username = :username AND password = :password', array(
+        $query = $dms->getAll('select * from users where username = :username AND password = :password', array(
                     ':username' => $user,
                     ':password' => $password
                         )
         );
 
-        $count = R::count($query);
+        $count = $dms->count($query);
 
         if ($count == 1) {
             if ($remember == true) {

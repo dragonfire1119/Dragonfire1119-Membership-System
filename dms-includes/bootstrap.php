@@ -18,7 +18,10 @@
 **************************************************************************/
 
 define("DMS_INC", dirname(__FILE__));
+
 require_once 'rb.php';
+$dms = new R();
+
 require_once 'dms-config.php';
 require_once 'hash.php';
 
