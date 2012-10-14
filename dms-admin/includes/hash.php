@@ -17,20 +17,38 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 **************************************************************************/
 
-// Uncoment this if you want to debug
-ini_set( 'display_errors', 1 );
-ini_set( 'log_errors', 1 );
-error_reporting( E_ALL );
+class Hash {
 
-/**
- * This is the main config file for DMS
- */
-define("ABSPATH", dirname(__FILE__));
+    /**
+     * Hash a password using the Bcrypt hashing scheme.
+     *
+     * <code>
+     * 		// Create a Bcrypt hash of a value
+     * 		$hash = Hash::make('secret');
+     *
+     * 		// Use a specified number of iterations when creating the hash
+     * 		$hash = Hash::make('secret', 12);
+     * </code>
+     *
+     * @param  string  $value
+     * @param  int     $rounds
+     * @return string
+     */
+    public static function make($value) {
 
-define("HOST", "localhost");
-define("DBNAME", "dms");
-define("USER", "root");
-define("PASSWORD", "");
+        $salt = sha1($value);
 
-R::setup('mysql:host='.HOST.';
-        dbname='.DBNAME.'',''.USER.'',''.PASSWORD.'');
+        return $salt;
+    }
+
+    /**
+     * Determine if an unhashed value matches a Bcrypt hash.
+     *
+     * @param  string  $value
+     * @param  string  $hash
+     * @return bool
+     */
+    public static function check($value, $hash) {
+        return sha1($value) === $hash;
+    }
+}

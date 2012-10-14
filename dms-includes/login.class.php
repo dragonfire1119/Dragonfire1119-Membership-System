@@ -42,11 +42,14 @@ class Login {
         if ($count == 1) {
             if ($remember == true) {
                 $expire = time() + 60 * 60 * 24 * 30;
-                setcookie("username", $user, $expire);
-                setcookie("remeber", $remeber, $expire);
+                //setcookie("username", $user, $expire);
+                //setcookie("remeber", $remeber, $expire);
+
+                CacheCookie::set("username", $user, $expire);
+                CacheCookie::set("remeber", $remeber, $expire);
             } else {
-                setcookie("username", $user);
-                setcookie("remeber", $remeber);
+                CacheCookie::set("username", $user, $expire);
+                CacheCookie::set("remeber", $remeber, $expire);
             }
         } else {
             return false;

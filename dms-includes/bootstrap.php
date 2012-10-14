@@ -24,6 +24,7 @@ $dms = new R();
 
 require_once 'dms-config.php';
 require_once 'hash.php';
+require_once 'cookie.class.php';
 
 require_once 'login.class.php';
 require_once 'register.class.php';

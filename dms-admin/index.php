@@ -1,7 +1,6 @@
-<?php
+<?php require_once 'admin-header.php'; ?>
+<?php require_once 'admin-header-menu.php'; ?>
+<div class="container">
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
+</div> <!-- /container -->
+<?php require_once 'admin-footer.php'; ?>
