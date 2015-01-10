@@ -83,7 +83,7 @@ class CacheCookie {
         } else {
             @list($digest, $cookie_json) = explode('|', $cookie, 2);
             if (empty($digest) || empty($cookie_json) ||
-                self::hash_equals($digest, hash_hmac(CACHE_COOKIE_DIGEST_METHOD, $cookie_json,
+                !self::hash_equals($digest, hash_hmac(CACHE_COOKIE_DIGEST_METHOD, $cookie_json,
                                       CACHE_COOKIE_SECRET_KEY))) {
                 $cookie_content = new \stdClass();
             } else {
