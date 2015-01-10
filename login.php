@@ -18,7 +18,7 @@
  * ************************************************************************ */
 
 require_once 'dms-includes/bootstrap.php';
-if (isset($_POST['halper'])) {
+if (isset($_POST['helper'])) {
     Login::user($_POST['username'], $_POST['password'], $_POST['remember']);
 }
 ?>

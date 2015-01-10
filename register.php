@@ -18,7 +18,7 @@
  * ************************************************************************ */
 
 require_once 'dms-includes/bootstrap.php';
-if (isset($_POST['halper'])) {
+if (isset($_POST['helper'])) {
     if ($_POST['password'] == $_POST['cpassword']) {
         Register::registerUser($_POST['username'], $_POST['email'], $_POST['password']);
     }
