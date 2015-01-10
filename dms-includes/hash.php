@@ -36,9 +36,7 @@ class Hash {
      */
     public static function make($value) {
 
-        $salt = sha1($value);
-
-        return $salt;
+        return password_hash($value, PASSWORD_BCRYPT);
     }
 
     /**
@@ -49,6 +47,6 @@ class Hash {
      * @return bool
      */
     public static function check($value, $hash) {
-        return sha1($value) === $hash;
+        return password_verify($value, $hash);
     }
 }
