@@ -3,7 +3,7 @@
 
 define('CACHE_COOKIE_NAME', 'cache');
 define('CACHE_COOKIE_SECRET_KEY', '<change this>');
-define('CACHE_COOKIE_DIGEST_METHOD', 'md5');
+define('CACHE_COOKIE_DIGEST_METHOD', 'sha256');
 define('CACHE_COOKIE_DURATION', 30 * 60);
 
 class CacheCookie {
@@ -63,6 +63,19 @@ class CacheCookie {
         unset($_COOKIE[CACHE_COOKIE_NAME]);
     }
 
+    protected static function _timingsafe_cmp($a, $b) {
+        $a_len = strlen($a);
+        $b_len = strlen($b);
+        if ($a_len !== $b_len) {
+            return FALSE;
+        }
+        $x = 0;
+        for ($i = 0; $i < $a_len; $i++) {
+            $x |= (ord($a[$i]) ^ ord($b[$i]));
+        }
+        return $x === 0;
+    }
+
     protected static function _wipe_previous_cookie($cookie_name)
     {
         $headers = headers_list();
@@ -92,7 +105,10 @@ class CacheCookie {
         {
             @list($digest, $cookie_json) = explode('|', $cookie, 2);
             if (empty($digest) || empty($cookie_json) ||
-                    $digest !== hash_hmac(CACHE_COOKIE_DIGEST_METHOD, $cookie_json, CACHE_COOKIE_SECRET_KEY))
+                !self::_timingsafe_cmp($digest,
+                                       hash_hmac(CACHE_COOKIE_DIGEST_METHOD,
+                                                 $cookie_json,
+                                                 CACHE_COOKIE_SECRET_KEY)))
             {
                 $cookie_content = new \stdClass();
             }
